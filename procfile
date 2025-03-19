@@ -1,0 +1,6 @@
+# website name from apps.py file
+web: gunicorn website.wsgi --log-file
+
+
+# stuff for database
+web: python3 manage.py migrate && gunicorn website.wsg
